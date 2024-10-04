@@ -1,0 +1,26 @@
+<div class="encoder-container">
+  <h1>Morse Code Encoder</h1>
+
+  <div class="form-group">
+    <label for="textInput">Enter text to encode:</label>
+    <input
+      id="textInput"
+      type="text"
+      [(ngModel)]="userText"
+      class="input-text"
+      placeholder="Enter text"
+    />
+  </div>
+
+  <button class="encode-button" (click)="encode()">Encode to Morse</button>
+
+  <div class="result">
+    <label for="encode-result">Morse Code:</label>
+    <input
+      id="encode-result"
+      class="output-text"
+      readonly
+      placeholder="Encoded text will appear here"
+    />
+  </div>
+</div>
