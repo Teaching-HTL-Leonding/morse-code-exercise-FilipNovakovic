@@ -1,0 +1,31 @@
+<div class="decoder-container">
+  <h1>Morse Code Decoder</h1>
+
+  <div class="form-group">
+    <label for="morseInput">Enter Morse code to decode:</label>
+    <input
+      id="morseInput"
+      type="text"
+      [(ngModel)]="morseCode"
+      class="input-text"
+      placeholder="Enter Morse code (dots, dashes, spaces)"
+    />
+  </div>
+
+  <button class="decode-button" (click)="decode()">Decode</button>
+
+  <div class="result" *ngIf="decodedText">
+    <label for="decodedText">Decoded Text:</label>
+    <input
+      id="decodedText"
+      class="output-text"
+      [value]="decodedText"
+      readonly
+      placeholder="Decoded message will appear here"
+    />
+  </div>
+
+  <div class="error-message" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</div>
